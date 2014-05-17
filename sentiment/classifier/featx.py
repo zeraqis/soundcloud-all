@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+
+def allfeats(document, word_features):
+    document_words = set(document)
+    features = {}
+    for word in word_features:
+        features['contains(%s)' % word] = (word in document_words)
+    return features
+

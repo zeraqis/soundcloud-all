@@ -1,0 +1,11 @@
+genre must be passed in lower case
+
+license cannot be passed as list
+
+most tracks are all-rights-reserved followed by cc-by-nc-sa, cc-by-nc, cc-by
+
+400 error when cc-by-nc, arr, nrr license request
+
+404 error when resource not available (such as no comments and where track does not exist but ID exists)
+
+503 error when param unrecognized or general server error (traffic and server kicks out at random, some genres throw this error, type casting errors) - repeated retry code execution
