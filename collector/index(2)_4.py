@@ -76,7 +76,7 @@ req_genres = [
 
 for req_genre in req_genres:
 
-    sub_dir = 'data/cc-by-nc-sa/' + req_genre + '/'
+    sub_dir = 'data/cc-by-sa/' + req_genre + '/'
     
     if not os.path.exists(sub_dir):
         os.makedirs(sub_dir)
@@ -85,7 +85,7 @@ for req_genre in req_genres:
     pages = 0
     while pages < 8200:
         try:
-            r_tracks = client.get('/tracks', limit = 200, offset = pages,  created_at = { 'from' : '2012-01-01 00:00:00' , 'to' : '2012-07-01 00:00:00'}, genres = req_genre, license = 'cc-by-nc-sa', order='created_at')
+            r_tracks = client.get('/tracks', limit = 200, offset = pages,  created_at = { 'from' : '2013-07-01 00:00:00' , 'to' : '2014-01-01 00:00:00'}, genres = req_genre, license = 'cc-by-sa', order='created_at')
             if not(r_tracks):
                 break
             for track in r_tracks:
@@ -111,4 +111,6 @@ for req_genre in req_genres:
             pages += 200
         except:
             print "503"
+
+#!/usr/bin/env python
 

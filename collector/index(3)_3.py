@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-#!/usr/bin/env python
-#!/usr/bin/env python
 import soundcloud
 from preproc.filter import remove_diacritic
 import unicodedata
@@ -87,7 +85,7 @@ for req_genre in req_genres:
     pages = 0
     while pages < 8200:
         try:
-            r_tracks = client.get('/tracks', limit = 200, offset = pages,  created_at = { 'from' : '2013-01-01 00:00:00' , 'to' : '2013-07-01 00:00:00'}, genre = req_genre, license = 'cc-by-nc-nd', order='created_at')
+            r_tracks = client.get('/tracks', limit = 200, offset = pages,  created_at = { 'from' : '2013-01-01 00:00:00' , 'to' : '2013-07-01 00:00:00'}, genres = req_genre, license = 'cc-by-nc-nd', order='created_at')
             if not(r_tracks):
                 break
             for track in r_tracks:
