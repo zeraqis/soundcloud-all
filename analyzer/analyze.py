@@ -4,7 +4,7 @@ import cPickle as pickle
 import collections
 import csv
 
-sub_dir = 'D:/Dev/soundcloud data/bulk'
+sub_dir = '/home/sathya/Dev/soundcloud-data/categorized'
 with open('analysis.csv', 'wb') as csv_file:
     for lic_folder in os.listdir(sub_dir):
         print '----------\n----------'
@@ -32,7 +32,7 @@ with open('analysis.csv', 'wb') as csv_file:
                             min_created = track.created_at
                         if max_comment_count < track.comment_count:
                             max_comment_count = track.comment_count
-            row = [genre_folder, max_created, min_created, max_comment_count, number_tracks]
+            row = [genre_folder, lic_folder, max_created, min_created, max_comment_count, number_tracks]
             print row
             writer = csv.writer(csv_file)
             writer.writerow(row)

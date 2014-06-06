@@ -3,7 +3,7 @@ import os
 import cPickle as pickle
 import math
 
-sub_dir = 'D:\Github\soundcloud-all\collector\data'
+sub_dir = '/home/sathya/Dev/soundcloud-data/uncategorized'
 track_paths = []
 comment_paths = []
 count = 0
@@ -26,7 +26,7 @@ for root, dirs, files in os.walk(sub_dir):
                         with open(comment_dir, 'rb') as comment_in:
                             comments = pickle.load(comment_in)
                             for comment in comments:
-                                if comment.timestamp and track.user_id != comment.user_id:
+                                if comment.timestamp and track.user_id != comment.user_id and track.streamable:
                                     curr_comment += 1
                     except IOError as e:
                         print file_dir
@@ -39,13 +39,15 @@ for root, dirs, files in os.walk(sub_dir):
                         if comment_dir:
                             comment_paths.append(comment_dir)
 
-try:                            
-    for dirs in track_paths:
+
+for dirs in track_paths:
+    try:
         os.remove(dirs)
-except:
-    print "Done"
-try:
-    for dirs in comment_paths:
+    except:
+        print "Done"
+
+for dires in comment_paths:
+    try:
         os.remove(dirs)
-except:
-    print "No Comment"
+    except:
+        print "No Comment"

@@ -7,7 +7,23 @@ import csv
 
 date_format = "%Y/%m/%d"
 
-sub_dir = 'D:/Dev/soundcloud data/final'
+edm = {
+'deep house',
+'house',
+'progressive house',
+'tech house',
+'drum & bass',
+'dubstep',
+'electro',
+'electronic',
+'hardcore techno',
+'minimal techno',
+'techno',
+'trance',
+'trap'
+}
+
+sub_dir = '/home/sathya/Dev/soundcloud-data/categorized'
 
 with open('relative_week.csv', 'wb') as csv_file:
     for root, dirs, files in os.walk(sub_dir):
@@ -70,8 +86,9 @@ with open('relative_week.csv', 'wb') as csv_file:
                     print i
                 print "score", score1, score2
                 relDir = os.path.relpath(root, sub_dir)
-                lic = str(relDir).split('\\')[0]
-                genre = str(relDir).split('\\')[1]
-                row = [track.id, track_genre, lic, genre, track.permalink_url, track.created_at, comment_count, score1, score2]
+                lic = str(relDir).split('/')[0]
+                genre = str(relDir).split('/')[1]
+                #if genre not in edm:
+                row = [track.id, track_genre, lic, genre, track.permalink_url, track.created_at, comment_count, track.comment_count, score1, score2]
                 writer = csv.writer(csv_file)
                 writer.writerow(row)
