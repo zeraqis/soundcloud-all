@@ -1,0 +1,258 @@
+- key: rb
+  subtags:
+  - key: soul
+    subtags: []
+- key: electronic
+  subtags:
+  - key: breakbeat
+    subtags: []
+  - key: dance
+    subtags: []
+  - key: electro
+    subtags:
+    - key: complextro
+      subtags: []
+  - key: techno
+    subtags:
+    - key: minimaltechno
+      subtags: []
+    - key: schranz
+      subtags: []
+    - key: hardtechno
+      subtags: []
+  - key: chiptune
+    subtags: []
+  - key: trance
+    subtags:
+    - key: psychedelictrance
+      subtags: []
+    - key: upliftingtrance
+      subtags: []
+    - key: goa
+      subtags: []
+    - key: progressivetrance
+      subtags: []
+  - key: hardstyle
+    subtags: []
+  - key: triphop
+    subtags: []
+  - key: disco
+    subtags: []
+  - key: hardcoretechno
+    subtags:
+    - key: gabber
+      subtags: []
+    - key: breakcore
+      subtags: []
+    - key: speedcore
+      subtags: []
+  - key: drumbass
+    subtags:
+    - key: neurofunk
+      subtags: []
+    - key: techstep
+      subtags: []
+  - key: dubstep
+    subtags: []
+  - key: grime
+    subtags: []
+  - key: electronicrock
+    subtags:
+    - key: dreampop
+      subtags: []
+    - key: krautrock
+      subtags: []
+    - key: darkwave
+      subtags: []
+    - key: synthpop
+      subtags: []
+  - key: ambient
+    subtags:
+    - key: drone
+      subtags: []
+    - key: downtempo
+      subtags: []
+  - key: house
+    subtags:
+    - key: deephouse
+      subtags: []
+    - key: moombahton
+      subtags: []
+    - key: electrohouse
+      subtags: []
+    - key: microhouse
+      subtags: []
+    - key: techhouse
+      subtags: []
+    - key: progressivehouse
+      subtags: []
+- key: spoken 
+  subtags: []
+- key: classical
+  subtags:
+  - key: choir
+    subtags: []
+  - key: opera
+    subtags: []
+  - key: orchestral
+    subtags: []
+  - key: contemporaryclassical
+    subtags: []
+  - key: symphony
+    subtags: []
+  - key: classicalguitar
+    subtags: []
+  - key: concerto
+    subtags: []
+  - key: piano
+    subtags: []
+- key: country
+  subtags:
+  - key: bluegrass
+    subtags: []
+  - key: americana
+    subtags: []
+- key: hiphop
+  subtags:
+  - key: instrumentalhiphop
+    subtags: []
+  - key: gangstarap
+    subtags: []
+  - key: dirtysouth
+    subtags: []
+  - key: freestylehiphop
+    subtags: []
+  - key: rap
+    subtags: []
+  - key: mixtape
+    subtags: []
+  - key: turntablism
+    subtags: []
+  - key: trap
+    subtags: []
+- key: reggae
+  subtags:
+  - key: ragga
+    subtags: []
+  - key: dub
+    subtags: []
+  - key: soca
+    subtags: []
+  - key: dancehall
+    subtags: []
+  - key: reggaeton
+    subtags: []
+  - key: ska
+    subtags: []
+- key: metal
+  subtags:
+  - key: deathmetal
+    subtags: []
+  - key: grindcore
+    subtags: []
+  - key: progressivemetal
+    subtags: []
+  - key: thrashmetal
+    subtags: []
+  - key: hardrock
+    subtags: []
+  - key: metalcore
+    subtags: []
+  - key: industrialmetal
+    subtags: []
+  - key: blackmetal
+    subtags: []
+- key: pop
+  subtags:
+  - key: ballad
+    subtags: []
+  - key: easylistening
+    subtags: []
+  - key: singersongwriter
+    subtags: []
+  - key: dancepop
+    subtags: []
+  - key: acousticpop
+    subtags: []
+- key: othermusic
+  subtags: []
+- key: rock
+  subtags:
+  - key: funkrock
+    subtags: []
+  - key: indierock
+    subtags: []
+  - key: punk
+    subtags: []
+  - key: acousticrock
+    subtags: []
+  - key: rocknroll
+    subtags:
+    - key: rockabilly
+      subtags: []
+  - key: folkrock
+    subtags: []
+  - key: instrumentalrock
+    subtags: []
+  - key: alternativerock
+    subtags:
+    - key: gothic
+      subtags: []
+    - key: grunge
+      subtags: []
+    - key: shoegaze
+      subtags: []
+  - key: progressiverock
+    subtags: []
+- key: world
+  subtags:
+  - key: tango
+    subtags: []
+  - key: african
+    subtags: []
+  - key: latin
+    subtags:
+    - key: salsa
+      subtags: []
+    - key: mambo
+      subtags: []
+    - key: bachata
+      subtags: []
+    - key: banda
+      subtags: []
+    - key: samba
+      subtags: []
+    - key: cumbia
+      subtags: []
+    - key: merengue
+      subtags: []
+  - key: gospel
+    subtags: []
+  - key: arabic
+    subtags: []
+  - key: oriental
+    subtags: []
+  - key: chanson
+    subtags: []
+  - key: bhangra
+    subtags: []
+  - key: folk
+    subtags: []
+  - key: indian
+    subtags: []
+- key: jazz
+  subtags:
+  - key: freejazz
+    subtags: []
+  - key: jazzfusion
+    subtags: []
+  - key: blues
+    subtags: []
+  - key: swing
+    subtags: []
+  - key: jazzfunk
+    subtags: []
+  - key: smoothjazz
+    subtags: []
+- key: noise
+  subtags: []

@@ -21,7 +21,27 @@ def remove_diacritic(input):
     without any diacritical marks.
     '''
     if input:
-        return unicodedata.normalize('NFKD', input).encode('ASCII', 'xmlcharrefreplace')
+        return unicodedata.normalize('NFKD', input).encode('ASCII', 'ignore')
+    else:
+        return ''
+
+def check_exist(input):
+    '''
+    Accept a unicode string, and return a normal string (bytes in Python 3)
+    without any diacritical marks.
+    '''
+    if input:
+        return input
+    else:
+        return ''
+
+def replace_diacritic(input):
+    '''
+    Accept a unicode string, and return a normal string (bytes in Python 3)
+    without any diacritical marks.
+    '''
+    if input:
+        return input.encode('ASCII', 'xmlcharrefreplace')
     else:
         return ''
 
