@@ -1,0 +1,291 @@
+<style xmlns:hqa=
+"http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2011-11-11/HTMLQuestion.xsd"
+xmlns:eqa=
+"http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd"
+xmlns:qap=
+"http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd"
+xmlns:sunjava="xalan://java.net" xmlns:xalan="http://xml.apache.org/xalan" xmlns:lxslt=
+"http://xml.apache.org/xslt" type="text/css">
+/*<![CDATA[*/
+          #hit-wrapper {
+          margin: 10px;
+          border: 1px black solid;
+          padding: 10px;
+          line-height: 1.5em;
+          background-color: white;
+          width: 100%;
+          max-width:97%;
+          }
+
+          form>#hit-wrapper {
+          border: 1px black solid;
+          margin: 5px 0px 10px 15px;
+          width: 96%;
+          }
+
+          p {
+          padding-left: 5px;
+          padding-right: 5px;
+          }
+
+          .overview-wrapper {
+          border-bottom: 1px lightgrey solid;
+          }
+
+          .title {
+          font-size: 150%;
+          font-weight: bold;
+          }
+
+
+          .question-error-wrapper {
+          border: 2px solid rgb(214, 0, 0);
+          border-bottom: 2px solid rgb(214, 0, 0);
+          }
+
+          .fieldset {
+          border: none;
+          }
+
+          .checkbox-wrapper {
+          margin: 0;
+          padding: 0;
+          vertical-align: middle;
+          }
+
+          .radiobutton-wrapper {
+          margin: 0;
+          padding: 0;
+          vertical-align: middle;
+          }
+
+          .free-text-wrapper {
+          padding-left: 15px;
+          }
+
+          .answer-binary-wrapper {
+          margin: 5px;
+          }
+
+          .dropdown-wrapper {
+          padding-left: 15px;
+          }
+
+          .error-message-none-wrapper {
+          color: rgb(214, 0, 0);
+          display: none;
+          visibility: hidden;
+          }
+
+          .error-message-error-wrapper {
+          color: rgb(214, 0, 0);
+          display: block;
+          visibility: visible;
+          }
+/*]]>*/
+</style>
+
+<title></title>
+</head>
+
+<body>
+<div id="hit-wrapper">
+  <div class="overview-wrapper">
+    <p class="overview title">EDM Recruitment Task</p>
+
+    <p class="overview text">We are carrying out non-profit research at a university to
+    recruit workers with knowledge in Electronic Dance Music (EDM) for a task.<br />
+    <br />
+    By accepting this HIT, you agree that:<br /></p>
+
+    <p class="overview-list-wrapper"></p>
+
+    <ul class="overview-list">
+      <li class="overview-list-item">We may publish excerpts of your answers for
+      scientific articles;</li>
+
+      <li class="overview-list-item">We will NOT publish any information that could be
+      linked to you.</li>
+    </ul>
+
+    <p class="overview text">People experienced with EDM would be familiar about the
+    following: <b>drop</b> and <b>build</b><br />
+    <br />
+    Here, you will listen to two electronic dance music tracks from SoundCloud and
+    answer a set of questions. Press the &ldquo;Play&rdquo; button to start listening
+    to the song. Please feel free to play/pause, move back and forth in the song to
+    answer the questions.<br /></p>
+  </div>
+
+  <div class="question-wrapper">
+    <div class="question-content-wrapper">
+      <p class=" text">Do you listen to Electronic Dance Music?</p>
+    </div>
+
+    <div class="HITAnswer-wrapper">
+        <table cellspacing="4" cellpadding="0" border="0">
+          <tr>
+            <td valign="center"><input type="radio" name="listen_EDM" value="Yes"/>Yes</td>
+          </tr>
+          <tr>
+            <td valign="center"><input type="radio" name="listen_EDM" value="No"/>No</td>
+          </tr>
+        </table>
+    </div>
+  </div>
+
+  <div class="question-wrapper">
+    <div class="question-content-wrapper">
+      <p class=" text">Do you have experience in creating Electronic Dance Music?</p>
+    </div>
+
+    <div class="HITAnswer-wrapper">
+        <table cellspacing="4" cellpadding="0" border="0">
+          <tr>
+            <td valign="center"><input type="radio" name="experience" value="Yes"/>Yes</td>
+          </tr>
+          <tr>
+            <td valign="center"><input type="radio" name="experience" value="No"/>No</td>
+          </tr>
+        </table>
+    </div>
+  </div>
+
+  <div class="question-wrapper">
+    <div class="question-content-wrapper">
+      <p class=" text">Do you listen to music on SoundCloud (<a href="https://soundcloud.com/stream">https://soundcloud.com/stream</a>)?</p>
+    </div>
+
+    <div class="HITAnswer-wrapper">
+        <table cellspacing="4" cellpadding="0" border="0">
+          <tr>
+            <td valign="center"><input type="radio" name="listen_soundcloud" value="Yes"/>Yes</td>
+          </tr>
+          <tr>
+            <td valign="center"><input type="radio" name="listen_soundcloud" value="No"/>No</td>
+          </tr>
+        </table>
+    </div>
+  </div>
+
+  <div class="question-wrapper">
+    <div class="question-content-wrapper">
+      <p class=" text">Would you be interested to participate in an experiment where you will listen to EDM tracks?</p>
+    </div>
+
+    <div class="HITAnswer-wrapper">
+        <table cellspacing="4" cellpadding="0" border="0">
+          <tr>
+            <td valign="center"><input type="radio" name="interest" value="Yes"/>Yes</td>
+          </tr>
+          <tr>
+            <td valign="center"><input type="radio" name="interest" value="No"/>No</td>
+          </tr>
+        </table>
+    </div>
+  </div>
+
+  <div class="question-wrapper" style="margin-top: 20px">
+    <iframe frameborder="no" height="200" id="sc-widget1" scrolling="no" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/107826768" width="100%">Error</iframe>
+    <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      (function(){
+        var widgetIframe = document.getElementById('sc-widget1'),
+            widget       = SC.Widget(widgetIframe),
+            newSoundUrl = 'http://api.soundcloud.com/tracks/107826768';
+        widget.bind(SC.Widget.Events.READY, function() {
+            widget.load(newSoundUrl, {
+              show_comments: false
+            });
+        });
+    
+      }());
+    </script>
+    <div class="question-content-wrapper">
+      <p class=" text">Please indicate the time (in the format: minutes: seconds) in
+      the song where <b>"build"</b> section begins.</p>
+    </div>
+
+    <div class="HITAnswer-wrapper">
+      <table cellspacing="4" cellpadding="0" border="0">
+          <tr>
+            <td valign="center"><input type="radio" name="build" value="1"/>The <b>build</b> section begins at 02:00</td>
+          </tr>
+          <tr>
+            <td valign="center"><input type="radio" name="build" value="2"/>The <b>build</b> section begins at 00:45</td>
+          </tr>
+          <tr>
+            <td valign="center"><input type="radio" name="build" value="3"/>The <b>build</b> section begins at 02:30</td>
+          </tr>
+          <tr>
+            <td valign="center"><input type="radio" name="build" value="4"/>The <b>build</b> section begins at 03:47</td>
+          </tr>
+      </table>
+    </div>
+  </div>
+  
+  <div class="question-wrapper" style="margin-top: 20px">
+    
+    <iframe frameborder="no" height="200" id="sc-widget2" scrolling="no" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/131198625" width="100%">Error</iframe>
+    <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      (function(){
+        var widgetIframe = document.getElementById('sc-widget2'),
+            widget       = SC.Widget(widgetIframe),
+            newSoundUrl = 'http://api.soundcloud.com/tracks/131198625';
+        widget.bind(SC.Widget.Events.READY, function() {
+            widget.load(newSoundUrl, {
+              show_comments: false
+            });
+        });
+      }());
+    </script>
+    <div class="question-content-wrapper">
+      <p class=" text">Please indicate the time (in the format: minutes: seconds) in
+      the song where <b>"drop"</b> occurs.</p>
+    </div>
+
+    <div class="HITAnswer-wrapper">
+      <table cellspacing="4" cellpadding="0" border="0">
+          <tr>
+            <td valign="center"><input type="radio" name="drop" value="1"/>The <b>drop</b> section begins at 00:36  </td>
+          </tr>
+          <tr>
+            <td valign="center"><input type="radio" name="drop" value="2"/>The <b>drop</b> section begins at 01:56</td>
+          </tr>
+          <tr>
+            <td valign="center"><input type="radio" name="drop" value="3"/>The <b>drop</b> section begins at 01:08</td>
+          </tr>
+          <tr>
+            <td valign="center"><input type="radio" name="drop" value="4"/>The <b>drop</b> section begins at 04:05</td>
+          </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="question-wrapper">
+
+    <div class="question-content-wrapper">
+      <p class=" text">Please provide any information which describing your experience with EDM:</p>
+    </div>
+
+    <div class="HITAnswer-wrapper">
+      <div class="free-text-answer-wrapper">
+        <input size="60" type="text" class="question free-text" name="info_experience"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="question-wrapper">
+
+    <div class="question-content-wrapper">
+      <p class=" text">Please indicate any problems you face while doing this task.</p>
+    </div>
+
+    <div class="HITAnswer-wrapper">
+      <div class="free-text-answer-wrapper">
+        <input size="60" type="text" class="question free-text" name="info_problems"/>
+      </div>
+    </div>
+  </div>
+</div>
