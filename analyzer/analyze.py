@@ -4,7 +4,7 @@ import cPickle as pickle
 import collections
 import csv
 
-sub_dir = '/home/sathya/Dev/soundcloud-data/categorized'
+sub_dir = '/home/sathya/Dev/soundcloud-data/xml_original_final'
 with open('analysis.csv', 'wb') as csv_file:
     for lic_folder in os.listdir(sub_dir):
         print '----------\n----------'
