@@ -1,0 +1,8 @@
+get-user-comments.py		: get comments from bulk pickles to form track-user mapping	: comments_track-user.json
+comments_user-track.py		: invert track-user mapping to user-track mapping		: comments_user-track.json
+user-track-interaction.py	: create interaction json with useful information		: user-interaction.json
+get-interactions.py		: filter user-interaction.json to generate multiple files	: comment-favorite_user-track.json, 
+												  comment-not-favorite_user-track.json
+partition-set.py		: partition filtered user-track jsons to sets			: train_users.txt, dev_users.txt, 													  			    test_users.txt
+get-set-comments.py		: create json with comments for partitioned sets		: train, test, dev_favorite-comments.json
+classifier-base.py		: naive bayes classifier treating entire comment as feat

@@ -1,0 +1,65 @@
+******TEST SET******
+favorite precision: 0.662165835976
+favorite recall: 0.112661506676
+favorite F-measure: 0.192560578709
+not-favorite precision: 0.588403993592
+not-favorite recall: 0.956651666841
+not-favorite F-measure: 0.728643861397
+******DEV SET******
+favorite precision: 0.669155308621
+favorite recall: 0.11491956525
+favorite F-measure: 0.19615228013
+not-favorite precision: 0.570466253762
+not-favorite recall: 0.953892128633
+not-favorite F-measure: 0.713957131603
+Most Informative Features
+                 comment = u'Check My Out My Page Peeps Always Got New Joints Up..Peace' not-fa : favori =     23.0 : 1.0
+                 comment = u'Hold up'     favori : not-fa =     22.5 : 1.0
+                 comment = u'shared with #trancePure' not-fa : favori =     20.7 : 1.0
+                 comment = u'niceeeee!!!\nIt would be great if you could join my facebook page!\nhttp://www.facebook.com/johnthrix' not-fa : favori =     18.0 : 1.0
+                 comment = u'\u2661'      favori : not-fa =     17.2 : 1.0
+                 comment = u'Great~!!'    not-fa : favori =     16.6 : 1.0
+                 comment = u'\u2764\ufe0f\u2764\ufe0f\u2764\ufe0f' favori : not-fa =     15.6 : 1.0
+                 comment = u'Omg'         favori : not-fa =     15.3 : 1.0
+                 comment = u'Yolo'        favori : not-fa =     14.1 : 1.0
+                 comment = u'\u2764\ufe0f\u2764\ufe0f' favori : not-fa =     13.4 : 1.0
+                 comment = u'Hi'          favori : not-fa =     13.1 : 1.0
+                 comment = u'Love'        favori : not-fa =     12.9 : 1.0
+                 comment = u'Swag'        favori : not-fa =     12.6 : 1.0
+                 comment = u'Muito bom!'  favori : not-fa =     12.6 : 1.0
+                 comment = u'love this song' favori : not-fa =     12.4 : 1.0
+                 comment = u'I love this song' favori : not-fa =     11.4 : 1.0
+                 comment = u'MARKETING KILLS CREATIVITY...Join:soundcloud.com/groups/freestyle-anti-labels-league-p' not-fa : favori =     11.4 : 1.0
+                 comment = u'*.*'         favori : not-fa =     11.1 : 1.0
+                 comment = u'eargasm'     favori : not-fa =     11.1 : 1.0
+                 comment = u'Yesss'       favori : not-fa =     11.1 : 1.0
+                 comment = u'Smoke weed everyday' favori : not-fa =     11.1 : 1.0
+                 comment = u'nice track :)' not-fa : favori =     10.8 : 1.0
+                 comment = u'Nice work.'  not-fa : favori =     10.8 : 1.0
+                 comment = u'<3 <3 <3 <3' favori : not-fa =     10.3 : 1.0
+                 comment = u'\u0631\u0627\u0626\u0639' favori : not-fa =     10.3 : 1.0
+                 comment = u'check out my website for my eMixing/Mastering service!' favori : not-fa =     10.3 : 1.0
+                 comment = u'holy shit'   favori : not-fa =     10.3 : 1.0
+                 comment = u'love it!!!'  favori : not-fa =     10.3 : 1.0
+                 comment = u":'("         favori : not-fa =     10.3 : 1.0
+                 comment = u'No'          favori : not-fa =     10.3 : 1.0
+                 comment = u'Hell yeah'   favori : not-fa =     10.3 : 1.0
+                 comment = u'Love this song' favori : not-fa =      9.9 : 1.0
+                 comment = u'brutal'      favori : not-fa =      9.5 : 1.0
+                 comment = u'Better than the original' favori : not-fa =      9.5 : 1.0
+                 comment = u'amazing <3'  favori : not-fa =      9.5 : 1.0
+                 comment = u'best part'   favori : not-fa =      9.4 : 1.0
+                 comment = u'Like Page - https://www.facebook.com/pages/The-Latinbeatz/626506990698846' favori : not-fa =      8.8 : 1.0
+                 comment = u'Beautiful!!!' favori : not-fa =      8.8 : 1.0
+                 comment = u'love it <3'  favori : not-fa =      8.7 : 1.0
+                 comment = u'I love this' favori : not-fa =      8.5 : 1.0
+                 comment = u'Awsome'      favori : not-fa =      8.5 : 1.0
+                 comment = u'\u0627\u0644\u0644\u0647' favori : not-fa =      8.5 : 1.0
+                 comment = u'cool stuff'  not-fa : favori =      8.4 : 1.0
+                 comment = u'@luanawfulitchlive: top man' not-fa : favori =      8.4 : 1.0
+                 comment = u'Beast'       favori : not-fa =      8.0 : 1.0
+                 comment = u'fucking awesome' favori : not-fa =      8.0 : 1.0
+                 comment = u'Amazing <3'  favori : not-fa =      8.0 : 1.0
+                 comment = u'woooow'      favori : not-fa =      8.0 : 1.0
+                 comment = u'Thank you!!!' not-fa : favori =      7.9 : 1.0
+                 comment = u'Cool track'  not-fa : favori =      7.9 : 1.0

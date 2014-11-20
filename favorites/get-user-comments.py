@@ -2,6 +2,7 @@
 import os
 import cPickle as pickle
 import csv
+import json
 
 sub_dir = '/home/sathya/Dev/soundcloud-data/bulk_pickle'
 
@@ -15,10 +16,11 @@ for root, dirs, files in os.walk(sub_dir):
                     comments = pickle.load(input)
                     for comment in reversed(comments):
                         if comment.track_id not in track_user_dict:
-                            track_user_dict[comment.track_id] = []
-                        track_user_dict[comment.track_id].append(comment.user_id)
+                            track_user_dict[comment.track_id] = {}
+                        if comment.user_id not in track_user_dict[comment.track_id]:
+                                track_user_dict[comment.track_id][comment.user_id] = []
+                        track_user_dict[comment.track_id][comment.user_id].append(comment.body)
 print len(track_user_dict)
-with open("track-user.tsv","w") as csvfile:
-    csvwriter = csv.writer(csvfile, delimiter="\t")
-    for track in track_user_dict:
-        csvwriter.writerow([track, track_user_dict[track]])
+
+with open("comments_track-user.json","w") as json_file:
+    json.dump(track_user_dict, json_file, indent=4)
