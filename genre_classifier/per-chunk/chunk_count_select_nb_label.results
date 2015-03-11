@@ -1,0 +1,15 @@
+label	precision	recall	f_score	true_support
+classical	1.0	1.0	1.0	1
+country	0.0	0.0	0.0	1
+electronic	1.0	1.0	1.0	1
+hiphop	1.0	1.0	1.0	1
+jazz	0.5	1.0	0.666666666667	1
+metal	0.0	0.0	0.0	1
+noise	1.0	1.0	1.0	1
+othermusic	0.0	0.0	0.0	1
+pop	0.5	1.0	0.666666666667	1
+rb	0.5	1.0	0.666666666667	1
+reggae	0.0	0.0	0.0	1
+rock	0.5	1.0	0.666666666667	1
+spoken	1.0	1.0	1.0	1
+world	1.0	1.0	1.0	1

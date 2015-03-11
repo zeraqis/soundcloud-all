@@ -1,0 +1,13 @@
+file	featx	selection	precision	recall	f_score
+user_count_nb.results	term_freq	no	0.418833233748	0.486346182723	0.442096788735
+user_count_select_nb.results	term_freq	yes	0.432641118575	0.148994286777	0.172479409761
+user_count_select_svc.results	term_freq	yes	0.408315242636	0.0334355850155	0.0268548808705
+user_count_select_svc_sq.results	term_freq	yes	0.394536231404	0.0322057046428	0.0252199265809
+user_count_svc.results	term_freq	no	0.408259212101	0.0373611915539	0.0311397616406
+user_count_svc_sq.results	term_freq	no	0.41368254775	0.0402142279998	0.0343353968604
+user_tfidf_nb.results	tf_idf	no	0.387746015857	0.169523278346	0.199407159647
+user_tfidf_select_nb.results	tf_idf	yes	0.379665151737	0.140027600804	0.165887546681
+user_tfidf_select_svc.results	tf_idf	yes	0.375592213346	0.0647188793788	0.0564549599921
+user_tfidf_select_svc_sq.results	tf_idf	yes	0.375651372299	0.0647260298461	0.0564564434318
+user_tfidf_svc.results	tf_idf	no	0.379696616317	0.0646187728368	0.0557233089111
+user_tfidf_svc_sq.results	tf_idf	no	0.379561402739	0.064597321435	0.0556839657791

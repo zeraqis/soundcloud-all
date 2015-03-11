@@ -4,7 +4,7 @@ import cPickle as pickle
 import csv
 import json
 
-sub_dir = '/home/sathya/Dev/soundcloud-data/bulk_pickle'
+sub_dir = '/tudelft.net/staff-bulk/ewi/insy/mmc/nathan/bulk_pickle'
 
 track_user_dict = {}
 
@@ -22,5 +22,5 @@ for root, dirs, files in os.walk(sub_dir):
                         track_user_dict[comment.track_id][comment.user_id].append(comment.body)
 print len(track_user_dict)
 
-with open("comments_track-user.json","w") as json_file:
+with open("comments_track-user-temp.json","w") as json_file:
     json.dump(track_user_dict, json_file, indent=4)

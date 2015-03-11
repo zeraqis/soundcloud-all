@@ -1,0 +1,45 @@
+#!/usr/bin/env python
+from sklearn.feature_extraction.text import CountVectorizer
+from pandas import DataFrame
+from nltk.tokenize import wordpunct_tokenize
+from nltk.corpus import stopwords
+import nltk
+import itertools
+import scipy.sparse
+
+nltk.data.path.append('/tudelft.net/staff-bulk/ewi/insy/mmc/nathan/nltk_data')
+
+stop = stopwords.words('english')
+
+def tokenizer(comment):
+    comment_words = set(wordpunct_tokenize(comment))
+    comment_words = comment_words.difference(stop)
+    return comment_words
+
+custom_count_vectorizer = CountVectorizer(analyzer = tokenizer)
+
+df = DataFrame({'text': [ "I like it!!!!"], 'class': ['tmp']})
+
+custom_counts = custom_count_vectorizer.fit_transform(df['text'])
+
+print custom_counts
+print custom_counts.getnnz()
+print custom_count_vectorizer.get_feature_names()
+
+coo_custom_counts = custom_counts.tocoo()
+
+for i,j,v in itertools.izip(coo_custom_counts.row, coo_custom_counts.col, coo_custom_counts.data):
+    print custom_count_vectorizer.get_feature_names()[j], v
+
+dev_df = DataFrame({'text': [ "sdijkfhskdjfn lkfgjhldkfgj fjkghdkfjhg dkfljghfdkljhg dflikghxfljgh"], 'class': ['tmp']})
+
+dev_custom_counts = custom_count_vectorizer.transform(dev_df['text'])
+
+print dev_custom_counts
+print dev_custom_counts.getnnz()
+print custom_count_vectorizer.get_feature_names()
+
+coo_dev_custom_counts = dev_custom_counts.tocoo()
+
+for i,j,v in itertools.izip(coo_dev_custom_counts.row, coo_dev_custom_counts.col, coo_dev_custom_counts.data):
+    print custom_count_vectorizer.get_feature_names()[j], v
