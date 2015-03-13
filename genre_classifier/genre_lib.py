@@ -84,9 +84,11 @@ def classify_this(train_df, dev_df, clf, vectorizer, name, selection_flag):
     print 'classifying ' + name
     
     train_vector = vectorizer.fit_transform(numpy.asarray(train_df['text']))
+    train_feats_count = train_vector.getnnz()
     train_labels = numpy.asarray(train_df['class'])
     
     dev_vector = vectorizer.transform(numpy.asarray(dev_df['text']))
+    dev_feats_count = dev_vector.getnnz()
     dev_labels = numpy.asarray(dev_df['class'])
     
     if selection_flag:
@@ -112,13 +114,13 @@ def classify_this(train_df, dev_df, clf, vectorizer, name, selection_flag):
     
     with open(name + '.results', 'w') as results_file:
         tsvwriter = csv.writer(results_file, delimiter='\t')
-        tsvwriter.writerow(['precision','recall','f_score'])
-        tsvwriter.writerow([precision, recall, f_score])
+        tsvwriter.writerow(['precision', 'train_feats_count', 'dev_feats_count', 'recall','f_score'])
+        tsvwriter.writerow([precision, train_feats_count, dev_feats_count, recall, f_score])
     
     precision, recall, f_score, true_support = metrics.precision_recall_fscore_support(dev_labels, pred_labels, labels=clf.classes_, average=None)
     
     with open(name + '_label.results', 'w') as results_file:
         tsvwriter = csv.writer(results_file, delimiter='\t')
-        tsvwriter.writerow(['label', 'precision','recall','f_score', 'true_support'])
+        tsvwriter.writerow(['label', 'train_feats_count', 'dev_feats_count', 'precision','recall','f_score', 'true_support'])
         for i, label in enumerate(clf.classes_):
-            tsvwriter.writerow([label, precision[i], recall[i], f_score[i], true_support[i]])
+            tsvwriter.writerow([label, train_feats_count, dev_feats_count, precision[i], recall[i], f_score[i], true_support[i]])

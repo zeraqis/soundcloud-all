@@ -2,6 +2,7 @@
 import cPickle as pickle
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.dummy import DummyClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import LinearSVC
 from sklearn import linear_model
@@ -38,12 +39,18 @@ for genre in genre_dev_model:
         dev_df = dev_df.append(DataFrame({'text': [genre_dev_model[genre][user]], 'class': [genre]}))
 
 count_vectorizer = CountVectorizer(analyzer = tokenizer)
-tfidf_vectorizer = TfidfVectorizer(analyzer = tokenizer)
+tfidf_vectorizer = TfidfVectorizer(analyzer = tokenizer, min_df = 3)
 
+b1_stratified_classifier = DummyClassfier(strategy='stratified')
+b2_dominant_classifier = DummyClassfier(strategy='most_frequent')
+b3_pseudorandom_classifier = DummyClassfier(strategy = 'uniform')
 nb_classifier = MultinomialNB()
 svc_classifier = LinearSVC()
 svc_sq_classifier = LinearSVC(loss='l2')
 
+classify_this(train_df, dev_df, b1_stratified_classifier, count_vectorizer, 'user_count_b1', 0)
+classify_this(train_df, dev_df, b2_dominant_classifier, count_vectorizer, 'user_count_b2', 0)
+classify_this(train_df, dev_df, b3_pseudorandom_classifier, count_vectorizer, 'user_count_b3', 0)
 classify_this(train_df, dev_df, nb_classifier, count_vectorizer, 'user_count_nb', 0)
 classify_this(train_df, dev_df, svc_classifier, count_vectorizer, 'user_count_svc', 0)
 classify_this(train_df, dev_df, svc_sq_classifier, count_vectorizer, 'user_count_svc_sq', 0)

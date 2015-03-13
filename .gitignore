@@ -1,3 +1,17 @@
+*.csv
+*.output
+*.tsv
+*.json
+*.out
+*.7z
+*.pickle
+final_collector/timed-comments-data
+*.xlsx
+simple_recommender/co_commenter_chunks
+simple_recommender/baseline_self_model_results
+simple_recommender/co_commenter_results
+simple_recommender/model_shell
+simple_recommender/self_chunks
 *.pydevproject
 .project
 .metadata
@@ -118,4 +132,3 @@ pip-log.txt
 .tox
 *.mo
 .mr.developer.cfg
-sentiment

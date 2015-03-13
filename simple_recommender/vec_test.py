@@ -9,12 +9,12 @@ import scipy.sparse
 
 nltk.data.path.append('/tudelft.net/staff-bulk/ewi/insy/mmc/nathan/nltk_data')
 
-stop = stopwords.words('english')
-
 def tokenizer(comment):
-    comment_words = set(wordpunct_tokenize(comment))
-    comment_words = comment_words.difference(stop)
-    return comment_words
+    stop = stopwords.words('english')
+    comment_words = wordpunct_tokenize(comment)
+    filtered_words = [w for w in comment_words if not w in stop]
+    return filtered_words
+
 
 custom_count_vectorizer = CountVectorizer(analyzer = tokenizer)
 
